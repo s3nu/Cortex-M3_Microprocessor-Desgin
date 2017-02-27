@@ -29,7 +29,7 @@ all: LPC1769_GPIO_anahit.axf
 LPC1769_GPIO_anahit.axf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU Linker'
-	arm-none-eabi-gcc -nostdlib -L"/Users/anahitsarao/Documents/LPCXpresso_8.2.2/workspace/CMSIS_CORE_LPC17xx/Debug" -Xlinker -Map="LPC1769_GPIO_anahit.map" -Xlinker --gc-sections -mcpu=cortex-m3 -mthumb -T "LPC1769_GPIO_anahot_Debug.ld" -o "LPC1769_GPIO_anahit.axf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-gcc -nostdlib -L"/Users/anahitsarao/Documents/gitprojects/Cortex-M3_Microprocessor-Desgin/CMSIS_CORE_LPC17xx/Debug" -Xlinker -Map="LPC1769_GPIO_anahit.map" -Xlinker --gc-sections -mcpu=cortex-m3 -mthumb -T "LPC1769_GPIO_anahot_Debug.ld" -o "LPC1769_GPIO_anahit.axf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build
