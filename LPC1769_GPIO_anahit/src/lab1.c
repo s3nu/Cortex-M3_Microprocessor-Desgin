@@ -91,12 +91,10 @@ int main(void)
 		if(LPC_GPIO0->FIOPIN & (1 << 3))
 		{
 			setGPIO(0, 2);
-			printf("%d\n", LPC_GPIO0->FIOPIN & (1 << 3));
 		}
 		else
 		{
 			clearGPIO(0, 2);
-			printf("%d\n", LPC_GPIO0->FIOPIN & (1 << 3));
 		}
 	}
 
