@@ -80,3 +80,8 @@ local.properties
 
 #Mac
 .DS_Store
+/LPC1769_GPIO_anahit/Release
+/LPC1769_GPIO_anahit/Debug
+Debug
+Release
+/LPC1769_GPIO_anahit/.cproject
