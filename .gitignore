@@ -9,13 +9,13 @@ tmp/
 *~.nib
 local.properties
 .settings/
-.loadpath
-.recommenders
-.Debug/
-.Release/
+#.loadpath
+#.recommenders
+#.Debug/
+#.Release/
 
 # Eclipse Core
-.project
+#.project
 
 # External tool builders
 # .externalToolBuilders/
@@ -27,7 +27,7 @@ local.properties
 # *.pydevproject
 
 # CDT-specific (C/C++ Development Tooling)
-.cproject
+#.cproject
 
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
@@ -80,8 +80,3 @@ local.properties
 
 #Mac
 .DS_Store
-/LPC1769_GPIO_anahit/Release
-/LPC1769_GPIO_anahit/Debug
-Debug
-Release
-/LPC1769_GPIO_anahit/.cproject
