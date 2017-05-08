@@ -23,25 +23,25 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: SSP_Test.axf
+all: libCMSIS_CORE_LPC17xx.a
 
 # Tool invocations
-SSP_Test.axf: $(OBJS) $(USER_OBJS)
+libCMSIS_CORE_LPC17xx.a: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
-	@echo 'Invoking: MCU Linker'
-	arm-none-eabi-gcc -nostdlib -Xlinker -Map="SSP_Test.map" -Xlinker --gc-sections -mcpu=cortex-m3 -mthumb -T "SSP_Test_Release.ld" -o "SSP_Test.axf" $(OBJS) $(USER_OBJS) $(LIBS)
+	@echo 'Invoking: MCU Archiver'
+	arm-none-eabi-ar -r  "libCMSIS_CORE_LPC17xx.a" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build
 
 # Other Targets
 clean:
-	-$(RM) $(EXECUTABLES)$(OBJS)$(C_DEPS) SSP_Test.axf
+	-$(RM) $(OBJS)$(ARCHIVES)$(C_DEPS) libCMSIS_CORE_LPC17xx.a
 	-@echo ' '
 
 post-build:
 	-@echo 'Performing post-build steps'
-	-arm-none-eabi-size "SSP_Test.axf"; # arm-none-eabi-objcopy -v -O binary "SSP_Test.axf" "SSP_Test.bin" ; # checksum -p LPC1769 -d "SSP_Test.bin";
+	-arm-none-eabi-size "libCMSIS_CORE_LPC17xx.a" ; # arm-none-eabi-objdump -h -S "libCMSIS_CORE_LPC17xx.a" >"libCMSIS_CORE_LPC17xx.lss"
 	-@echo ' '
 
 .PHONY: all clean dependents

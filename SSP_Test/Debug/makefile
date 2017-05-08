@@ -29,7 +29,7 @@ all: SSP_Test.axf
 SSP_Test.axf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU Linker'
-	arm-none-eabi-gcc -nostdlib -Xlinker -Map="SSP_Test.map" -Xlinker --gc-sections -mcpu=cortex-m3 -mthumb -T "SSP_Test_Debug.ld" -o "SSP_Test.axf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-gcc -nostdlib -L"/Users/anahitsarao/Documents/127labs/CMSIS_CORE_LPC17xx/Debug" -Xlinker -Map="SSP_Test.map" -Xlinker --gc-sections -mcpu=cortex-m3 -mthumb -T "SSP_Test_Debug.ld" -o "SSP_Test.axf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build

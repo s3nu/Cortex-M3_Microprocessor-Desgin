@@ -209,7 +209,7 @@ uint8_t SSP1exchangeByte(uint8_t out){
 int main (void)
 {
 	int i;
-	initSSP1();
+		initSSP1();
 	        //enable_timer(0);
 	        for ( i = 0; i < 10000; i++ );
 	        printf("Device ID\n");
@@ -222,23 +222,58 @@ int main (void)
 	        for ( i = 0; i < 10000; i++ );
 	        printf("\n******************************************************************************\n");
 
-	        //**************************Write to buffer1
+//	        //**************************Write to buffer1
 	        //Opcode for write to buff1
-	        initSSP1();
-	        printf("\nWriting to Buffer 1\n");
-	        LPC_GPIO0->FIOCLR = (1<<6);
-	        SSP1exchangeByte(0x84); //Send 3 Bytes = 24 bits= 16 don't care bits + 8 (1st Byte of buffer) bits
-	        SSP1exchangeByte(0x00);
-	        SSP1exchangeByte(0x00);
-	        SSP1exchangeByte(0x00);
-	        //SSP1exchangeByte('0');
-	        SSP1exchangeByte('T');
-	        SSP1exchangeByte('e');
-	        SSP1exchangeByte('s');
-	        SSP1exchangeByte('t');
-	        LPC_GPIO2->FIOSET = (1<<6);
-	        for ( i = 0; i < 10000; i++ );
-	  	    printf("\n******************************************************************************\n");
+//	        initSSP1();
+//	        printf("\nWriting to Buffer 1\n");
+//	        LPC_GPIO0->FIOCLR = (1<<6);
+//	        SSP1exchangeByte(0x84); //Send 3 Bytes = 24 bits= 16 don't care bits + 8 (1st Byte of buffer) bits
+//	        SSP1exchangeByte(0x00);
+//	        SSP1exchangeByte(0x00);
+//	        SSP1exchangeByte(0x00);
+//	    	//SSP1exchangeByte('0');
+//	    	SSP1exchangeByte('S');
+//	    	SSP1exchangeByte('J');
+//	    	SSP1exchangeByte('S');
+//	    	SSP1exchangeByte('U');
+//	    	SSP1exchangeByte(' ');
+//
+//	    	SSP1exchangeByte('C');
+//	        SSP1exchangeByte('M');
+//	    	SSP1exchangeByte('P');
+//	    	SSP1exchangeByte('E');
+//	    	SSP1exchangeByte('1');
+//	    	SSP1exchangeByte('2');
+//	    	SSP1exchangeByte('7');
+//	    	SSP1exchangeByte(' ');
+//
+//	    	SSP1exchangeByte('A');
+//	    	SSP1exchangeByte('N');
+//	    	SSP1exchangeByte('A');
+//	    	SSP1exchangeByte('H');
+//	    	SSP1exchangeByte('I');
+//	    	SSP1exchangeByte('T');
+//	    	SSP1exchangeByte(' ');
+//	    	SSP1exchangeByte('S');
+//	    	SSP1exchangeByte('A');
+//	    	SSP1exchangeByte('R');
+//	    	SSP1exchangeByte('A');
+//	    	SSP1exchangeByte('O');
+//	    	SSP1exchangeByte(' ');
+//
+//	    	SSP1exchangeByte('0');
+//	    	SSP1exchangeByte('0');
+//	    	SSP1exchangeByte('8');
+//	    	SSP1exchangeByte('4');
+//	    	SSP1exchangeByte('3');
+//	    	SSP1exchangeByte('5');
+//	    	SSP1exchangeByte('5');
+//	    	SSP1exchangeByte('8');
+//	    	SSP1exchangeByte('3');
+//	        LPC_GPIO2->FIOSET = (1<<6);
+//	        for ( i = 0; i < 10000; i++ );
+//	  	    printf("\n******************************************************************************\n");
+
 
 	  	    initSSP1();
 	  	    printf("\nReading from Buffer 1\n");
@@ -256,24 +291,55 @@ int main (void)
 	  	  				        printf("\n 2\t %c",SSP1exchangeByte(0x00));
 	  	  				        printf("\n 3\t %c",SSP1exchangeByte(0x00));
 	  	  				        printf("\n 4\t %c",SSP1exchangeByte(0x00));
+	  	  				        printf("\n 5\t %c",SSP1exchangeByte(0x00));
+								printf("\n 6\t %c",SSP1exchangeByte(0x00));
+								printf("\n 7\t %c",SSP1exchangeByte(0x00));
+								printf("\n 8\t %c",SSP1exchangeByte(0x00));
+								printf("\n 9\t %c",SSP1exchangeByte(0x00));
+								printf("\n 10\t %c",SSP1exchangeByte(0x00));
+								printf("\n 11\t %c",SSP1exchangeByte(0x00));
+								printf("\n 12\t %c",SSP1exchangeByte(0x00));
+								printf("\n 13\t %c",SSP1exchangeByte(0x00));
+								printf("\n 14\t %c",SSP1exchangeByte(0x00));
+								printf("\n 15\t %c",SSP1exchangeByte(0x00));
+								printf("\n 16\t %c",SSP1exchangeByte(0x00));
+								printf("\n 17\t %c",SSP1exchangeByte(0x00));
+								printf("\n 18\t %c",SSP1exchangeByte(0x00));
+								printf("\n 19\t %c",SSP1exchangeByte(0x00));
+								printf("\n 20\t %c",SSP1exchangeByte(0x00));
+								printf("\n 21\t %c",SSP1exchangeByte(0x00));
+								printf("\n 22\t %c",SSP1exchangeByte(0x00));
+								printf("\n 23\t %c",SSP1exchangeByte(0x00));
+								printf("\n 24\t %c",SSP1exchangeByte(0x00));
+								printf("\n 25\t %c",SSP1exchangeByte(0x00));
+								printf("\n 26\t %c",SSP1exchangeByte(0x00));
+								printf("\n 27\t %c",SSP1exchangeByte(0x00));
+								printf("\n 28\t %c",SSP1exchangeByte(0x00));
+								printf("\n 29\t %c",SSP1exchangeByte(0x00));
+								printf("\n 30\t %c",SSP1exchangeByte(0x00));
+								printf("\n 31\t %c",SSP1exchangeByte(0x00));
+								printf("\n 32\t %c",SSP1exchangeByte(0x00));
+								printf("\n 33\t %c",SSP1exchangeByte(0x00));
+								printf("\n 34\t %c",SSP1exchangeByte(0x00));
+								printf("\n 35\t %c",SSP1exchangeByte(0x00));
 	  	  				        printf("\n******************************************************************************\n");
 	  	  						LPC_GPIO2->FIOSET = (1<<6);
 	  	  					for ( i = 0; i < 10000; i++ );
 
-	  	  	initSSP1();
-	  	    /************************************/
-	  	    printf("\nWriting from Buffer 1 to Flash Memory\n");
-	  	    LPC_GPIO0->FIOCLR = (1<<6);
-	  	    //**************************Write from buffer1 to main memory
-	        //Opcode for write from buffer1 to main memory with built-in erase
-	        SSP1exchangeByte(0x83);
-	        //Send 3 Bytes = 24 bits= 4 don't care bits + 12 addr bits (A19-A8) + 8 don't care bits
-	        SSP1exchangeByte(0x00);
-	        SSP1exchangeByte(0x00);
-	        SSP1exchangeByte(0x00);
-	       // SSP1exchangeByte(0xff);
-	        LPC_GPIO2->FIOSET = (1<<6);
-	        for ( i = 0; i < 10000; i++ );
+//	  	  	initSSP1();
+//	  	    /************************************/
+//	  	    printf("\nWriting from Buffer 1 to Flash Memory\n");
+//	  	    LPC_GPIO0->FIOCLR = (1<<6);
+//	  	    //**************************Write from buffer1 to main memory
+//	        //Opcode for write from buffer1 to main memory with built-in erase
+//	        SSP1exchangeByte(0x83);
+//	        //Send 3 Bytes = 24 bits= 4 don't care bits + 12 addr bits (A19-A8) + 8 don't care bits
+//	        SSP1exchangeByte(0x00);
+//	        SSP1exchangeByte(0x00);
+//	        SSP1exchangeByte(0x00);
+//	       // SSP1exchangeByte(0xff);
+//	        LPC_GPIO2->FIOSET = (1<<6);
+//	        for ( i = 0; i < 10000; i++ );
 
 	        //******************************************************************************************************************
 
@@ -305,15 +371,45 @@ int main (void)
 						SSP1exchangeByte(0x00);	//trial for buff1
 						//Send 1 dummy byte
 				        printf("\n",SSP1exchangeByte(0x00));
-				        printf("\n 1\t %c",SSP1exchangeByte(0x00));
-				        printf("\n 2\t %c",SSP1exchangeByte(0x00));
-				        printf("\n 3\t %c",SSP1exchangeByte(0x00));
-				        printf("\n 4\t %c",SSP1exchangeByte(0x00));
+						printf("\n 1\t %c",SSP1exchangeByte(0x00));
+						printf("\n 2\t %c",SSP1exchangeByte(0x00));
+						printf("\n 3\t %c",SSP1exchangeByte(0x00));
+						printf("\n 4\t %c",SSP1exchangeByte(0x00));
+						printf("\n 5\t %c",SSP1exchangeByte(0x00));
+						printf("\n 6\t %c",SSP1exchangeByte(0x00));
+						printf("\n 7\t %c",SSP1exchangeByte(0x00));
+						printf("\n 8\t %c",SSP1exchangeByte(0x00));
+						printf("\n 9\t %c",SSP1exchangeByte(0x00));
+						printf("\n 10\t %c",SSP1exchangeByte(0x00));
+						printf("\n 11\t %c",SSP1exchangeByte(0x00));
+						printf("\n 12\t %c",SSP1exchangeByte(0x00));
+						printf("\n 13\t %c",SSP1exchangeByte(0x00));
+						printf("\n 14\t %c",SSP1exchangeByte(0x00));
+						printf("\n 15\t %c",SSP1exchangeByte(0x00));
+						printf("\n 16\t %c",SSP1exchangeByte(0x00));
+						printf("\n 17\t %c",SSP1exchangeByte(0x00));
+						printf("\n 18\t %c",SSP1exchangeByte(0x00));
+						printf("\n 19\t %c",SSP1exchangeByte(0x00));
+						printf("\n 20\t %c",SSP1exchangeByte(0x00));
+						printf("\n 21\t %c",SSP1exchangeByte(0x00));
+						printf("\n 22\t %c",SSP1exchangeByte(0x00));
+						printf("\n 23\t %c",SSP1exchangeByte(0x00));
+						printf("\n 24\t %c",SSP1exchangeByte(0x00));
+						printf("\n 25\t %c",SSP1exchangeByte(0x00));
+						printf("\n 26\t %c",SSP1exchangeByte(0x00));
+						printf("\n 27\t %c",SSP1exchangeByte(0x00));
+						printf("\n 28\t %c",SSP1exchangeByte(0x00));
+						printf("\n 29\t %c",SSP1exchangeByte(0x00));
+						printf("\n 30\t %c",SSP1exchangeByte(0x00));
+						printf("\n 31\t %c",SSP1exchangeByte(0x00));
+						printf("\n 32\t %c",SSP1exchangeByte(0x00));
+						printf("\n 33\t %c",SSP1exchangeByte(0x00));
+						printf("\n 34\t %c",SSP1exchangeByte(0x00));
+						printf("\n 35\t %c",SSP1exchangeByte(0x00));
 				        printf("\n******************************************************************************\n");
 						LPC_GPIO2->FIOSET = (1<<6);
 						for ( i = 0; i < 10000; i++ );
 						//LPC_GPIO0->FIOCLR = (1<<6);
-
 
 	        while(1);
   //delayMs(0,100);

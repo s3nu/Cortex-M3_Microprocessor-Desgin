@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>SSP_Test</name>
+	<name>CMSIS_CORE_LPC17xx</name>
 	<comment></comment>
 	<projects>
-		<project>CMSIS_CORE_LPC17xx</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
